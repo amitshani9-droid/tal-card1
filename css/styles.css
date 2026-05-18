@@ -173,18 +173,6 @@ p {
   box-shadow: var(--shadow-lg);
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes floatOrb {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0, 0) scale(1); }
-}
 
 /* Sections */
 .hero {
@@ -194,7 +182,7 @@ p {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: url('../images/hero.jpg') center/cover no-repeat;
+  background: url('../images/hero.jpeg') center/cover no-repeat;
 }
 
 .hero::before {
@@ -557,7 +545,7 @@ p {
   height: 100%;
   background: rgba(26, 28, 27, 0.6);
   backdrop-filter: blur(5px);
-  z-index: 1000;
+  z-index: 1100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -786,17 +774,21 @@ svg {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  max-width: 900px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 .gallery-item {
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 3;
   transition: var(--transition-smooth);
 }
 
@@ -809,6 +801,8 @@ svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
+  image-orientation: from-image;
   transition: transform 0.6s ease;
   display: block;
 }
@@ -821,6 +815,25 @@ svg {
   .gallery-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.gallery-single {
+  max-width: 820px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-single img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gallery-single:hover img {
+  transform: scale(1.03);
 }
 
 /* Footer */
