@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Brand Tokens ─── */
+:root {
+  --color-primary:       #2E4F3A;
+  --color-primary-dark:  #1e3528;
+  --color-primary-light: #f0f5f2;
+  --color-accent:        #dd96b5;
+  --color-accent-dark:   #c97da0;
+  --color-background:    #faf7f5;
+  --color-surface:       #ffffff;
+  --color-surface-muted: #e5ede8;
+  --color-text:          #1a0f08;
+  --color-text-muted:    #4a3728;
+  --color-border:        rgba(46, 79, 58, 0.12);
+}
+
+/* ─── Base ─── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Custom utilities ─── */
+@layer utilities {
+  .image-orient {
+    image-orientation: from-image;
+  }
+  /* Gradient text for accent labels */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

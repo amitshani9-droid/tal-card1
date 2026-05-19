@@ -3,7 +3,8 @@
     "allow": [
       "Bash(python -c ' *)",
       "WebFetch(domain:taupe-torrone-c17d09.netlify.app)",
-      "Bash(sed -i 's|content=\"images/tal.JPG\"|content=\"https://taupe-torrone-c17d09.netlify.app/images/tal.JPG\"|g' \"c:/Users/97253/Desktop/\\\\xe2\\\\x80\\\\x8f\\\\xe2\\\\x80\\\\x8fתיקיה חדשה/index.html\" 2>&1 || echo \"failed\")"
+      "Bash(sed -i 's|content=\"images/tal.JPG\"|content=\"https://taupe-torrone-c17d09.netlify.app/images/tal.JPG\"|g' \"c:/Users/97253/Desktop/\\\\xe2\\\\x80\\\\x8f\\\\xe2\\\\x80\\\\x8fתיקיה חדשה/index.html\" 2>&1 || echo \"failed\")",
+      "Bash(npx --version)"
     ],
     "additionalDirectories": [
       "c:\\Users\\97253\\Desktop\\xe2\\x80\\x8f\\xe2\\x80\\x8fתיקיה חדשה"
